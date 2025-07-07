@@ -82,4 +82,19 @@ _Codes used for applying the probability threshold and filters (temporal and spa
 **gettingTemporalBreakPoints**| Code necessary to obtain breakpoints from which urban classification frequency after a year under analysis is greater than non-urban classification frequency. This code enables an analysis of "when" a pixel becomes urban throughout the time series.
 **temporalFilter**| Code necessary to apply the selected probability threshold (see [Urban classification threshold analysis using python](#Urban-classification-threshold-analysis-using-python)) and provide temporal consistency throughout the time series based on breakpoint analysis.
 **spatialFilter**| Code necessary for spatial adjustments related to the minimal quantity of pixels to be considered urban as well as operating closing operations to include urban green or non-built areas. Several layers of reference are considered here, as census tracts, density of roads and infrastructures, and others. 
+<br/>
 
+# Processing steps
+_Steps necessary to conduct the urban areas classification_
+
+1) In your GEE repository, create a folder where you will save the codes
+2) After creating a file for each one of the GEE codes above mentioned, adequate all the repository address to your folder
+3) The sequence of codes are:\
+-> **classification_batch.js** \
+-> **temporalStabilizationByRegion.js**\
+-> **bestProb_preProcessingByGridByYear.js**\
+-> **preProcessingThreshold.ipynb**\
+-> **meanThresholdsByGridAsImage.js**\
+-> **gettingTemporalBreakPoints**\
+-> **temporalFilter**\
+-> **spatialFilter**
